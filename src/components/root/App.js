@@ -1,4 +1,5 @@
-import Home from './home';
+import Home from '../home/home.js';
+
 function App() {
   return (
     <div className="App">
