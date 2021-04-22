@@ -1,10 +1,15 @@
 import Home from '../home/home.js';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  font-family: 'Roboto';
+`;
 
 function App() {
   return (
-    <div className="App">
+    <Wrapper className="App">
       <Home/>
-    </div>
+    </Wrapper>
   );
 }
 

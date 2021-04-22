@@ -1,22 +1,18 @@
 import weather from './weather-animate.svg';
 import styled from 'styled-components';
+import {Wrapper, Title} from './home.style.js';
+import Image from '../image/image';
+import SearchBar from '../searchBar/searchBar';
 
-const Div = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* background-color: orange; */
-    max-width: 80%;
-    margin-right: 0px;
-`;
 
 const Home = () => {
 
     return (
-        <Div>
-            {/* <img src={weather}/> */}
-            <div>Weather</div>
-        </Div>
+        <Wrapper>
+            <Image image={weather}/>
+            <Title>Weather</Title>
+            <SearchBar/>
+        </Wrapper>
     );
 }
 
