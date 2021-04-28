@@ -4,7 +4,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 function SearchBar(props) {
-    let tabletDevice = useMediaQuery('(min-width: 601px)');
+    let largeDevice = useMediaQuery('(min-width: 601px)');
 
     return (
         <Wrapper>
@@ -16,7 +16,7 @@ function SearchBar(props) {
                             color: "grey",
                         }} 
                         fontSize={
-                            tabletDevice? "medium": "small"
+                            largeDevice? "medium": "small"
                         }/>
                 </Button>
             </InputWrapper>
