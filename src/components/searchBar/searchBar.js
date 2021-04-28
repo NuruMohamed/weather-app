@@ -4,14 +4,20 @@ import SearchIcon from '@material-ui/icons/Search';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 function SearchBar(props) {
-    let largeDevice = useMediaQuery('(min-width: 601px)');
-    let laptop
+    let tabletDevice = useMediaQuery('(min-width: 601px)');
+
     return (
         <Wrapper>
             <InputWrapper>
                 <Input placeholder="search by country or city"/>
                 <Button>
-                    <SearchIcon style={{color: "grey"}} />
+                    <SearchIcon 
+                        style={{
+                            color: "grey",
+                        }} 
+                        fontSize={
+                            tabletDevice? "medium": "small"
+                        }/>
                 </Button>
             </InputWrapper>
             

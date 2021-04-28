@@ -6,7 +6,13 @@ export const Wrapper = styled.div`
     align-items: center;
     width: 100%;
     height: 10%;
-    
+
+    @media(min-width: 768px) {
+        height: 8%;
+    }
+    @media(min-width: 992px) {
+        height: 9%;
+    }
 `;
 
 export const InputWrapper = styled.div`
