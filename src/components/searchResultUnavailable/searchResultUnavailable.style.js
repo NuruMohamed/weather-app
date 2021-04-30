@@ -13,5 +13,10 @@ export const Content = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 30%;
+    height: 25%;
+    font-size: 14px;
+
+    @media(min-width: 768px ) and ( max-width: 992px){
+        height: 15%;
+    }
 `;

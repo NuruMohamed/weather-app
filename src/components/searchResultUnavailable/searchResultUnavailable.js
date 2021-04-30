@@ -7,9 +7,10 @@ function SearchResultUnavailable(props) {
         <Wrapper>
             <Content>
                 <MoodBadIcon 
+                id="icon"
                     style={ {
-                        width: 100, 
-                        height: 100, 
+                        width: 80, 
+                        height: 80, 
                         color: "rgba(0,0,0,0.5)"
                         }}/>
                 <div>sorry, we couldn't find test</div>
