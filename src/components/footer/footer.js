@@ -5,9 +5,12 @@ const Wrapper = styled.div`
     font-style: italic;
     font-size: 12px;
     padding: 5px;
-
     @media(min-width: 601px) {
       padding: 15px;
+    }
+
+    @media(min-width: 992px) {
+        padding: 5px;
     }
 `;
 

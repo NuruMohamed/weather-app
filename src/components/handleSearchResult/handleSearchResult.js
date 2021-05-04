@@ -6,8 +6,8 @@ import SearchResultAvailable from '../searchResultAvailable/searchResultAvailabl
 function HandleSearchResult(props) {
     return (
         <Wrapper>
-            {/* <SearchResultUnavailable/> */}
-            <SearchResultAvailable/>
+            <SearchResultUnavailable/>
+            {/* <SearchResultAvailable/> */}
         </Wrapper>
     );
 }
