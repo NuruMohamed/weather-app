@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const InputWrapper = styled.div`
+export const Form = styled.form`
     display: flex;
     flex-direction: row;
     width: 100%;
