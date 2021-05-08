@@ -12,7 +12,9 @@ function SearchResult(props) {
                 handleSearchValue={props.handleSearchValue}
                 searchValue= {props.searchValue}
             />
-            <HandleSearchResult/>
+            <HandleSearchResult
+                searchValue= {props.searchValue}
+            />
             <Footer/>
         </Wrapper>
     );
