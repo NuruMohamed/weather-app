@@ -40,7 +40,7 @@ function FetchWeatherData(props) {
 
     if(loading) props.setWeatherData({type: 'loading'}); //console.log("loading");
     else if(error) props.setWeatherData({type: 'error', data: error}); //console.log("erroor");
-    else if(data.getCityByName) props.setWeatherData({type: 'success', data: data});
+    else if(data.getCityByName) props.setWeatherData({type: 'success', data: data.getCityByName});
     else props.setWeatherData({type: 'none'});
     console.log('Fetch data>> test')
     return null;
