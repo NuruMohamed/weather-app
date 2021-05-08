@@ -2,7 +2,12 @@ import { useState } from 'react';
 import Home from '../home/home';
 import SearchResult from '../searchResult/search-result';
 import styled from 'styled-components';
+import {ApolloClient, ApolloProvider, InMemoryCache} from '@apollo/client';
 
+const client = ApolloClient({
+  uri: 'https://graphql-weather-api.herokuapp.com/',
+  cache: new InMemoryCache()
+});
 
 const state = "search-result";
 const Wrapper = styled.div`
@@ -16,7 +21,8 @@ function App() {
   let [searchValue, setSearchValue] = useState(false);
   console.log("app: ",searchValue);
   return (
-    <Wrapper className="App">
+    <ApolloProvider client={client}>
+      <Wrapper className="App">
       { searchValue? 
           <SearchResult 
             handleSearchValue={setSearchValue} 
@@ -27,6 +33,7 @@ function App() {
             handleSearchValue={setSearchValue}
             /> }
     </Wrapper>
+    </ApolloProvider>
   );
 }
 
