@@ -8,7 +8,10 @@ function SearchResult(props) {
 
     return (
         <Wrapper>
-            <SearchBar/>
+            <SearchBar 
+                handleSearchValue={props.handleSearchValue}
+                searchValue= {props.searchValue}
+            />
             <HandleSearchResult/>
             <Footer/>
         </Wrapper>

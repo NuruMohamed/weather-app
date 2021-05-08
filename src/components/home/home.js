@@ -7,13 +7,13 @@ import PopularCities from '../popularCities/popularCities';
 import Footer from '../footer/footer';
 
 
-const Home = () => {
+const Home = (props) => {
 
     return (
         <Wrapper id="lll">
             <Image image={weather}/>
             <Title>Weather</Title>
-            <SearchBar/>
+            <SearchBar handleSearchValue={props.handleSearchValue}/>
             <PopularCities/>
             <Footer/>
         </Wrapper>

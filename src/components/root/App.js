@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import Home from '../home/home';
 import SearchResult from '../searchResult/search-result';
 import styled from 'styled-components';
+
 
 const state = "search-result";
 const Wrapper = styled.div`
@@ -9,11 +11,21 @@ const Wrapper = styled.div`
   background-color: ${ () => state=="search-result"? "rgba(0,0,0,0.1)" : "white"};
 `;
 
+
 function App() {
+  let [searchValue, setSearchValue] = useState(false);
+  console.log("app: ",searchValue);
   return (
     <Wrapper className="App">
-      {/* <Home/> */}
-      <SearchResult/>
+      { searchValue? 
+          <SearchResult 
+            handleSearchValue={setSearchValue} 
+            searchValue= {searchValue}
+            /> 
+          : 
+          <Home 
+            handleSearchValue={setSearchValue}
+            /> }
     </Wrapper>
   );
 }
