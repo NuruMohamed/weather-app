@@ -22,6 +22,7 @@ function HandleSearchResult(props) {
     
     return (
         <Wrapper>
+            {console.log(weatherData)}
             { handleRender() }
             <FetchWeatherData 
                 searchValue = {props.searchValue}

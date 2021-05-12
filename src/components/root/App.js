@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 
 function App() {
   let [searchValue, setSearchValue] = useState(false);
-  console.log("app: ",searchValue);
+
   return (
     <ApolloProvider client={client}>
       <Wrapper className="App">

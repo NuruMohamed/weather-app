@@ -2,12 +2,14 @@ import React from 'react';
 import {Wrapper, HeaderCard, ContentCard, CardTitle, Table, SummaryContent, TemperatureContent, WindContent, CloudContent } from './cards.style';
 
 function Cards({weatherData}) {
-
+    let date = new Date(weatherData.weather.timestamp * 1000);
+    console.log(">>>>>>>>>>>>>>>>", date.getTime());
+    console.log(">>>>>>>>>>>>>>>>", date.toDateString());
     return (
         <Wrapper>
             <HeaderCard>
                 <h3> {weatherData.name}, {weatherData.country}</h3>
-                <div>Monday</div>
+                <div>{date.toDateString()}</div>
             </HeaderCard>
             
             <ContentCard>

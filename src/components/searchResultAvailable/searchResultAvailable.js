@@ -4,7 +4,7 @@ import GoogleMaps from '../googleMaps/googleMaps';
 import Cards from '../cards/cards';
 
 function SearchResultAvailable(props) {
-    console.log(props.weatherData.data)
+    console.log("searchResultAvailable")
     return (
         <Wrapper>
             <GoogleMaps coord = {props.weatherData.coord}/>
