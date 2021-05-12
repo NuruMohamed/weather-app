@@ -24,7 +24,7 @@ function Footer(props) {
 
     return (
         <Wrapper>
-            data from external<Link href="https://graphql-weather-api.herokuapp.com/">api</Link>
+            data from external<Link href="https://github.com/konstantinmuenster/graphql-weather-api">api</Link>
         </Wrapper>
     );
 }
