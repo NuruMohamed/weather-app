@@ -7,7 +7,5 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    /* border: 1px solid palegreen;  */
-    /* margin: 0px 0px; */
 `;
 

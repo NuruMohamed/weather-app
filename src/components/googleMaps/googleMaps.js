@@ -2,16 +2,8 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
-let lon = 38.6380575;
-let lat = 8.9630978;
-
-
-
 const Wrapper = styled.div`
     width: 100%;    
-    border: 1px solid red; 
-
-    /* height: 65%; */
     img {
         width: 100%;
         border-radius: 10px;
