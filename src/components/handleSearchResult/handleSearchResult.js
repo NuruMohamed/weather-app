@@ -12,9 +12,9 @@ function HandleSearchResult(props) {
         if(weatherData.type == 'loading') {
             return <DataLoading/>;
         } else if (weatherData.type == 'none') {
-            return <SearchResultUnavailable/>;
+            return <SearchResultUnavailable searchValue = {props.searchValue} />;
         } else if (weatherData.type == 'success') {
-            return <SearchResultAvailable weatherData = {weatherData}/>;
+            return <SearchResultAvailable weatherData = {weatherData.data}/>;
         } else if (weatherData.type == 'error') {
             return weatherData.data.message;
         }

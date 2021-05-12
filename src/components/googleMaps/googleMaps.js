@@ -4,7 +4,6 @@ import styled from 'styled-components';
 let lon = 38.6380575;
 let lat = 8.9630978;
 
-const url = `https://maps.googleapis.com/maps/api/staticmap?size=900x120&zoom=10&markers=color:red%7C${lat},${lon}&key=AIzaSyC9z-i2g5RgCVF80eUbeCZsrzbnN0csu8M`;
 
 const Wrapper = styled.div`
     width: 100%;    
@@ -18,7 +17,8 @@ const Wrapper = styled.div`
    
 `;
 
-function GoogleMaps(props) {
+function GoogleMaps({coord: { lat, lon}}) {
+    const url = `https://maps.googleapis.com/maps/api/staticmap?size=900x120&zoom=10&markers=color:red%7C${lat},${lon}&key=AIzaSyC9z-i2g5RgCVF80eUbeCZsrzbnN0csu8M`;
 
     return (
         <Wrapper>

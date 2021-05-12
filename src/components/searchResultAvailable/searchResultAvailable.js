@@ -4,10 +4,11 @@ import GoogleMaps from '../googleMaps/googleMaps';
 import Cards from '../cards/cards';
 
 function SearchResultAvailable(props) {
+    console.log(props.weatherData.data)
     return (
         <Wrapper>
-            <GoogleMaps/>
-            <Cards/>
+            <GoogleMaps coord = {props.weatherData.coord}/>
+            <Cards weatherData = {props.weatherData} />
         </Wrapper>
     );
 }

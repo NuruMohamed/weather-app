@@ -13,7 +13,7 @@ function SearchResultUnavailable(props) {
                         height: 80, 
                         color: "rgba(0,0,0,0.5)"
                         }}/>
-                <div>sorry, we couldn't find test</div>
+                <div>sorry, we couldn't find <b>{props.searchValue} </b> </div>
                 <div>make sure you spelled it correctly</div>
             </Content>
         </Wrapper>

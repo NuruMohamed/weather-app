@@ -1,12 +1,12 @@
 import React from 'react';
 import {Wrapper, HeaderCard, ContentCard, CardTitle, Table, SummaryContent, TemperatureContent, WindContent, CloudContent } from './cards.style';
 
-function Cards(props) {
+function Cards({weatherData}) {
 
     return (
         <Wrapper>
             <HeaderCard>
-                <h3> Adama, ET</h3>
+                <h3> {weatherData.name}, {weatherData.country}</h3>
                 <div>Monday</div>
             </HeaderCard>
             
@@ -15,15 +15,15 @@ function Cards(props) {
                 <SummaryContent>
                     <Table>
                         <tr>
-                            <td>Cloud</td>
-                            <td> 20.3</td>
+                            <td>Title</td>
+                            <td> {weatherData.weather.summary.title}</td>
                         </tr> 
                         <tr>
-                            <td> Few Clouds </td>
-                            <td> 20.3  </td>
+                            <td> Description </td>
+                            <td>{ weatherData.weather.summary.description}  </td>
                         </tr>
                     </Table>
-                    <img id="summary-image" src="http://openweathermap.org/img/wn/10d@2x.png"/> 
+                    <img id="summary-image" src={`http://openweathermap.org/img/wn/${weatherData.weather.summary.icon}@2x.png`}/> 
                 </SummaryContent>
             </ContentCard>
             
@@ -33,15 +33,15 @@ function Cards(props) {
                     <Table>
                         <tr>
                             <td>Min</td>
-                            <td> 20.3</td>
+                            <td> {weatherData.weather.temperature.min}</td>
                             <td>Max</td>
-                            <td> 20.3</td>
+                            <td> {weatherData.weather.temperature.max}</td>
                         </tr> 
                         <tr>
                             <td> Actual </td>
-                            <td> 20.3  </td>
-                            <td> Feels like </td>
-                            <td> 20.3  </td>
+                            <td> {weatherData.weather.temperature.actual}  </td>
+                            <td> Feels like</td>
+                            <td> {weatherData.weather.temperature.feelsLike}   </td>
                         </tr>
                     </Table>
                 </TemperatureContent>
@@ -53,11 +53,11 @@ function Cards(props) {
                     <Table>
                         <tr>
                             <td>speed</td>
-                            <td> 21</td>
+                            <td> {weatherData.weather.wind.speed}</td>
                         </tr> 
                         <tr>
                             <td> deg   </td>
-                            <td> 20.3  </td>
+                            <td> {weatherData.weather.wind.deg}  </td>
                         </tr>
                     </Table>
                 </WindContent>
@@ -69,15 +69,15 @@ function Cards(props) {
                     <Table>
                         <tr>
                             <td>Min</td>
-                            <td> 20.3</td>
+                            <td> {weatherData.weather.clouds.all}</td>
                         </tr> 
                         <tr>
                             <td> Actual </td>
-                            <td> 20.3  </td>
+                            <td> {weatherData.weather.clouds.visibility} </td>
                         </tr>
                         <tr>
                             <td> Actual </td>
-                            <td> 20.3  </td>
+                            <td> {weatherData.weather.clouds.humidity}  </td>
                         </tr>
                     </Table>
                 </CloudContent>
