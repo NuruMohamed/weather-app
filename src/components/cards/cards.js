@@ -3,8 +3,7 @@ import {Wrapper, HeaderCard, ContentCard, CardTitle, Table, SummaryContent, Temp
 
 function Cards({weatherData}) {
     let date = new Date(weatherData.weather.timestamp * 1000);
-    console.log(">>>>>>>>>>>>>>>>", date.getTime());
-    console.log(">>>>>>>>>>>>>>>>", date.toDateString());
+
     return (
         <Wrapper>
             <HeaderCard>

@@ -3,7 +3,6 @@ import {Wrapper, Content} from './searchResultUnavailable.style';
 import MoodBadIcon from '@material-ui/icons/MoodBad';
 
 function SearchResultUnavailable(props) {
-    console.log("searchResultUnvailable")
 
     return (
         <Wrapper>
